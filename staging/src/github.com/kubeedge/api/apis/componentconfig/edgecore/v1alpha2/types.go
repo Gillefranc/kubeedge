@@ -411,6 +411,12 @@ type TailoredKubeletConfiguration struct {
 	// Note: If -1 is specified, no cap will be applied. If 0 is specified, no image is returned.
 	// Default: 0
 	// +optional
+
+	// TODO: document
+	EnableRealTime bool            `json:"enableHCBS,omitempty"`
+	RtPeriod       metav1.Duration `json:"rtPeriod,omitempty"`
+	RtRuntime      metav1.Duration `json:"rtRuntime,omitempty"`
+
 	NodeStatusMaxImages *int32 `json:"nodeStatusMaxImages,omitempty"`
 	// maxOpenFiles is Number of files that can be opened by edged process.
 	// The value must be a non-negative number.

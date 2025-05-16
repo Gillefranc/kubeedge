@@ -15,8 +15,10 @@ import (
 	"github.com/kubeedge/api/apis/componentconfig/edgecore/v1alpha2"
 )
 
-var Config Configure
-var once sync.Once
+var (
+	Config Configure
+	once   sync.Once
+)
 
 type Configure struct {
 	v1alpha2.Edged
@@ -185,6 +187,9 @@ func ConvertEdgedKubeletConfigurationToConfigKubeletConfiguration(in *v1alpha2.T
 	}
 	out.ContainerRuntimeEndpoint = in.ContainerRuntimeEndpoint
 	out.ImageServiceEndpoint = in.ImageServiceEndpoint
+	out.EnableRealTime = in.EnableRealTime
+	out.RtPeriod = in.RtPeriod
+	out.RtRuntime = in.RtRuntime
 	return nil
 }
 

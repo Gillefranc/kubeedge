@@ -6,3 +6,11 @@ use (
 	./staging/src/github.com/kubeedge/beehive
 	./staging/src/github.com/kubeedge/mapper-framework
 )
+
+replace k8s.io/kubernetes => ../kubernetes
+
+replace k8s.io/cri-api => ../kubernetes/staging/src/k8s.io/cri-api
+
+replace k8s.io/kubelet => ../kubernetes/staging/src/k8s.io/kubelet
+
+replace k8s.io/api => ../kubernetes/staging/src/k8s.io/api

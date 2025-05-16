@@ -85,16 +85,13 @@ require (
 	github.com/Microsoft/hcsshim v0.11.7 // indirect
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/antlr/antlr4/runtime/Go/antlr/v4 v4.0.0-20230305170008-8188dc5388df // indirect
-	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20200428143746-21a406dcc535 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
-	github.com/bifurcation/mint v0.0.0-20180715133206-93c51c6ce115 // indirect
 	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chai2010/gettext-go v1.0.2 // indirect
 	github.com/checkpoint-restore/go-criu/v5 v5.3.0 // indirect
-	github.com/cheekybits/genny v1.0.0 // indirect
 	github.com/cilium/ebpf v0.9.1 // indirect
 	github.com/containerd/cgroups v1.1.0 // indirect
 	github.com/containerd/console v1.0.3 // indirect
@@ -169,9 +166,6 @@ require (
 	github.com/lann/ps v0.0.0-20150810152359-62de8c46ede0 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/liggitt/tabwriter v0.0.0-20181228230101-89fcab3d43de // indirect
-	github.com/lucas-clemente/aes12 v0.0.0-20171027163421-cd47fb39b79f // indirect
-	github.com/lucas-clemente/quic-go v0.10.1
-	github.com/lucas-clemente/quic-go-certificates v0.0.0-20160823095156-d2f86524cced // indirect
 	github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
@@ -185,7 +179,6 @@ require (
 	github.com/moby/locker v1.0.1 // indirect
 	github.com/moby/spdystream v0.2.0 // indirect
 	github.com/moby/sys/mountinfo v0.6.2 // indirect
-	github.com/moby/term v0.0.0-20221205130635-1aeaba878587
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/monochromegane/go-gitignore v0.0.0-20200626010858-205db1a8cc00 // indirect
@@ -238,7 +231,6 @@ require (
 	go.starlark.net v0.0.0-20230525235612-a134d8f9ddca // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.26.0 // indirect
-	golang.org/x/crypto v0.31.0
 	golang.org/x/exp v0.0.0-20220827204233-334a2380cb91 // indirect
 	golang.org/x/mod v0.17.0 // indirect
 	golang.org/x/oauth2 v0.17.0 // indirect
@@ -256,24 +248,35 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/tomb.v2 v2.0.0-20161208151619-d5d1b5820637 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
-	gopkg.in/yaml.v2 v2.4.0
 	k8s.io/cloud-provider v0.30.7 // indirect
-	k8s.io/cluster-bootstrap v0.30.7 // indirect
 	k8s.io/controller-manager v0.0.0 // indirect
 	k8s.io/csi-translation-lib v0.30.7 // indirect
 	k8s.io/dynamic-resource-allocation v0.0.0 // indirect
 	k8s.io/gengo/v2 v2.0.0-20240228010128-51d4e06bde70 // indirect
-	k8s.io/kms v0.30.7 //indirect
+	k8s.io/kms v0.30.7 // indirect
 	k8s.io/kube-scheduler v0.30.7 // indirect
 	k8s.io/kubelet v0.30.7 // indirect
 	k8s.io/legacy-cloud-providers v0.0.0 // indirect
 	k8s.io/pod-security-admission v0.0.0 // indirect
 	k8s.io/system-validators v1.8.0 // indirect
 	oras.land/oras-go v1.2.3 // indirect
-	oras.land/oras-go/v2 v2.5.0
-	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
 	sigs.k8s.io/kustomize/api v0.13.5-0.20230601165947-6ce0bf390ce3 // indirect
 	sigs.k8s.io/kustomize/kyaml v0.14.3-0.20230601165947-6ce0bf390ce3 // indirect
+)
+
+require (
+	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2 // indirect
+	github.com/bifurcation/mint v0.0.0-20180715133206-93c51c6ce115 // indirect
+	github.com/cheekybits/genny v1.0.0 // indirect
+	github.com/lucas-clemente/aes12 v0.0.0-20171027163421-cd47fb39b79f // indirect
+	github.com/lucas-clemente/quic-go v0.10.1
+	github.com/lucas-clemente/quic-go-certificates v0.0.0-20160823095156-d2f86524cced // indirect
+	github.com/moby/term v0.0.0-20221205130635-1aeaba878587
+	golang.org/x/crypto v0.31.0
+	gopkg.in/yaml.v2 v2.4.0
+	k8s.io/cluster-bootstrap v0.30.7 // indirect
+	oras.land/oras-go/v2 v2.5.0
+	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
 )
 
 replace (

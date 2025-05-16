@@ -1,0 +1,16 @@
+# Dockerfile.arm64-crossbuild
+FROM ubuntu:20.04
+
+
+RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
+  wget tar build-essential gcc-aarch64-linux-gnu libc6-dev-arm64-cross git ca-certificates
+#
+# Install Go manually
+RUN wget https://go.dev/dl/go1.21.7.linux-amd64.tar.gz && \
+  tar -C /usr/local -xzf go1.21.7.linux-amd64.tar.gz && \
+  ln -s /usr/local/go/bin/go /usr/local/bin/go
+
+ENV GOOS=linux
+ENV GOARCH=arm64
+ENV CGO_ENABLED=1
+ENV CC=aarch64-linux-gnu-gcc
